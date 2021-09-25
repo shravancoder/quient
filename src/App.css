@@ -1,38 +1,467 @@
-.App {
+.hero{
+    width: 100%;
+    background-color: #262626;
+    height: 75vh;
+    background-image: url(https://source.unsplash.com/random?business,dark);
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.header__wrapper{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+.header__content h1{
+    font-size: 45px;
+    color: #fff;
+}
+.header__content p{
+    color: rgb(235, 235, 235);
+    width: 65%;
+}
+
+
+.learn_more{
+    width: 195px;
+height: 53px;
+background: linear-gradient(92.48deg, #FA8305 2.08%, #FB9E3C 117.25%);
+display: flex;
+align-items: center;
+justify-content: center;
+text-decoration: none;
+color: #fff;
+border-radius: 65px;
+}
+
+#textual__info{
+    width: 100%;
+    
+}
+
+.container{
+    width: 90%;
+    margin: 45px auto;
+}
+
+.container h1{
+    font-size: 65px;
+    margin-bottom: 15px;
+}
+.container p{
+    font-size: 18px;
+    color: rgb(58, 58, 58);
+    width: 75%;
+}
+
+.textual__container{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+
+#objectives ul{
+    list-style: none;
+    padding: 0;
+}
+
+#testimonials{
+    width: 100%;
+    height: 70vh;
+}
+
+.testimonials__wrapper{
+    width: 100%;
+    margin: 40px auto;
+}
+
+.testimonail_list{
+    min-width: 100%;
+    display: flex;
+    gap:16px;
+    overflow-x: scroll;
+
+}
+.testimonal__card{
+    min-width: 572px;
+    box-shadow: 0px 4px 5px 1px rgba(0, 0, 0, 0.15);
+    border: 1px solid #84878A;
+    border-radius: 15px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+
+.card__wrapper{
+    width: 90%;
+    margin: 0 auto;
+}
+.card__body{
+    display: flex;
+    align-items: flex-start;
+    gap:12px;
+}
+
+.card__body p{
+    font-size: 13px;
+    line-height: 149.24%;
+    text-align: justify;
+}
+.card__footer{
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap:16px;
+}
+
+.user__avatar{
+    width: 62px;
+    height: 62px;
+    background-color: #ccc;
+    border-radius: 50%;
+}
+.user__detail{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.user__detail h3{
+    margin-top: 0;
+    margin-bottom: 5px;
+    font-size: 14px;
+line-height: 21px;
+}
+.user__detail span{
+    font-size: 12px;
+line-height: 18px;
+}
+
+#about{
+    width: 100%;
+    height: 70vh;
+}
+
+#contact{
+    width:100%;
+    height: 70vh;
+}
+
+#vision{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.gallery__wrapper{
+   
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap:12px;
+}
+.gallery__wrapper img{
+    width: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.whatsapp_btn{
+    width: 45px;
+    height: 45px;
+    background-color: #03ad44;
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    border: 1px solid transparent;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.whatsapp_btn svg{
+    width: 23px;
+    height: 23px;
+    fill: #fff;
+}
+
+footer{
+    width: 100%;
+    height: 150px;
+    background-color: #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.footer__wrapper {
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.login{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.login_box{
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.login_form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.field{
+    width: 45%;
+    height: 49px;
+    border: 1px solid #999;
+    margin-top: 12px;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    border-radius: 3px;
+    
+}
+.login_btn{
+    width: 45%;
+    height: 49px;
+    background-color: #505050;
+    border: 1px solid transparent;
+    color: #fff;
+    border-radius: 3px;
+    
+}
+.login_btn_enable{
+    background-color: #242424;
+}
+.field label{
+    position: absolute;
+    top: -22px;
+    color: rgb(47, 47, 47);
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.field input{
+    width: 100%;
+    height: 100%;
+    border: 1px solid transparent;
+    background-color: transparent;
+    padding-left: 10px;
+}
+
+
+.responses{
+    width: 90%;
+    margin: 35px auto;
+}
+.response__header{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+}
+
+.searchbar{
+    width: 290px;
+    height: 48px;
+    border: 1px solid #999;
+    display: flex;
+    align-items: center;
+    border-radius: 3px;
+    background-color: rgb(245, 245, 245);
+}
+.searchbar input{
+    width: 100%;
+    height: 100%;
+    border: 1px solid transparent;
+    background-color: transparent;
+    padding-left: 10px;
+}
+.filter{
+    width: 130px;
+    height: 48px;
+    border: 1px solid #999;
+    background-color: rgb(245, 245, 245);
+    border-radius: 3px;
+}
+.mobile_nav{
+    width: 100%;
+    background-color: #262626;
+    overflow: hidden;
+}
+.mobile_nav ul{
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+.mobile_nav ul li{
+    padding: 15px;
+    text-align: center;
+}
+.mobile_nav ul li a{
+    font-weight: 600;
+    color: #fff;
+    text-decoration: none;
+}
+table {
+    border: 1px solid #ccc;
+    border-collapse: collapse;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    table-layout: fixed;
+  }
+
+  table caption {
+    font-size: 1.5em;
+    margin: .5em 0 .75em;
+  }
+  table tr {
+    background-color: #f8f8f8;
+    border: 1px solid #ddd;
+    padding: .35em;
+  }
+
+  table th,
+table td {
+  padding: .625em;
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+table th {
+    font-size: .85em;
+    letter-spacing: .1em;
+    text-transform: uppercase;
   }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  .logout_btn{
+      width: 165px;
+      height: 48px;
+      position: fixed;
+      bottom: 15px;
+      right: 15px;
+      background-color: #FB9E3C;
+      border-radius: 65px;
+      border: 1px solid transparent;
+      font-weight: 600;
+      cursor: pointer;
   }
-  to {
-    transform: rotate(360deg);
-  }
+@media screen and (max-width:886px){
+    .header__wrapper{
+        
+        width: 90%;
+        margin: 0 auto;
+       
+    }
+    
+    #testimonials h1{
+        font-size: 25px;
+    }
+    #vision{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    #vision h1{
+        text-align: center;
+    }
+    
+    #objectives h1{
+        text-align: center;
+    }
+    #objectives ul{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    #objectives ul li {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
 }
+
+
+@media screen and (max-width: 600px) {
+    table {
+      border: 0;
+    }
+  
+    table caption {
+      font-size: 1.3em;
+    }
+    
+    table thead {
+      border: none;
+      clip: rect(0 0 0 0);
+      height: 1px;
+      margin: -1px;
+      overflow: hidden;
+      padding: 0;
+      position: absolute;
+      width: 1px;
+    }
+    
+    table tr {
+      border-bottom: 3px solid #ddd;
+      display: block;
+      margin-bottom: .625em;
+    }
+    
+    table td {
+      border-bottom: 1px solid #ddd;
+      display: block;
+      font-size: .8em;
+      text-align: right;
+    }
+    
+    table td::before {
+      /*
+      * aria-label has no advantage, it won't be read inside a table
+      content: attr(aria-label);
+      */
+      content: attr(data-label);
+      float: left;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+    
+    table td:last-child {
+      border-bottom: 0;
+    }
+  }
+
+
+/* @media screen and (min-width:706px){
+    .header__wrapper{
+        
+        
+        height: 350px;
+    }
+} */
+
+
