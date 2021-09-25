@@ -9,7 +9,7 @@ function Login() {
     const history = useHistory();
 
     const handleLogin = ()=>{
-        axios.post('http://localhost:5000/admin/login',{username,password}).then((response)=>{
+        axios.post('https://contact-app-server-api.herokuapp.com/admin/login',{username,password}).then((response)=>{
             console.log(response);
             const {error,token} = response.data;
             if(error){

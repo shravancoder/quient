@@ -52,7 +52,7 @@ function Feeback() {
 
     if(e.target.value.length>0){
       console.log('running')
-      setFiltered(responses.filter((response)=>response.first_name.toLowerCase().includes(e.target.value)));
+      setFiltered(responses.filter((response)=>response.first_name.toLowerCase().includes(e.target.value.toLowerCase())));
     }
     else{
       console.log('empty')
