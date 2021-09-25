@@ -20,22 +20,22 @@ function About() {
                     </li>
                     <li>
                         <div>
-                            <Link to="/">Testimonial</Link>
+                            <Link to="/testimonial">Testimonial</Link>
                         </div>
                     </li>
                     <li>
                         <div>
-                            <Link to="/">Gallery</Link>
+                            <Link to="/gallery">Gallery</Link>
                         </div>
                     </li>
                     <li>
                         <div>
-                            <Link to="/">About</Link>
+                            <Link to="/about">About</Link>
                         </div>
                     </li>
                     <li>
                         <div>
-                            <Link to="/">Contact us</Link>
+                            <Link to="/contact">Contact us</Link>
                         </div>
 
                     </li>
