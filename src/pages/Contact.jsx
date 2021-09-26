@@ -3,7 +3,6 @@ import Cookies from 'js-cookie';
 import React from 'react'
 import { Link } from 'react-router-dom';
 import Fab from '../components/Fab'
-import Footer from '../components/Footer'
 import Navbar from '../components/Navbar'
 
 function Contact() {
@@ -23,7 +22,7 @@ function Contact() {
         
     }
     const handleContact = ()=>{
-        axios.post('http://localhost:5000/contact',{
+        axios.post('https://contact-app-server-api.herokuapp.com/contact',{
             fname,
             lname,
             email,

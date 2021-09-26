@@ -29,7 +29,7 @@ function Feeback() {
   const handleFilter = (e)=>{
    
     console.log(e.target.value);
-    axios.get(`http://localhost:5000/contact/${e.target.value}`).then((response)=>{
+    axios.get(`https://contact-app-server-api.herokuapp.com/contact/${e.target.value}`).then((response)=>{
       const {data} = response;
       console.log(data);
       filtered?setFiltered(data):response && setResponses(data);
@@ -61,7 +61,7 @@ function Feeback() {
 
   const handleDelete = (id)=>{
     const element = document.getElementById(id);
-    axios.delete(`http://localhost:5000/contact/${id}`).then((response)=>{
+    axios.delete(`https://contact-app-server-api.herokuapp.com/contact/${id}`).then((response)=>{
       element.remove();
     }).catch((e)=>{
       console.log(e);
