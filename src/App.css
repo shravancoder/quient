@@ -152,13 +152,153 @@ line-height: 18px;
 
 #contact{
     width:100%;
-    height: 70vh;
+    height: 90vh;
+    overflow: hidden;
 }
+.contact__wrapper{
+    width: 90%;
+    margin: 35px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 90%;
+}
+
+
+.contact_box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 75%;
+}
+.contact_box h1{
+    font-size: 32px;
+}
+.contact_form{
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.contact-field{
+    width: 100%;
+    height: 49px;
+    border: 1px solid #999;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    position: relative;
+    border-radius: 3px;
+}
+.contact-field label{
+    position: absolute;
+    left: 10px;
+    top: 15px;
+    transition: all .2s ease-in;
+}
+.contact-field input{
+    width: 100%;
+    height: 100%;
+    padding-left: 10px;
+    border: 1px solid transparent;
+    background-color: transparent;
+    outline: 0;
+}
+.contact-field input:focus + label{
+    top: -10px;
+    background-color: #fff;
+    font-size: 14px;
+}
+.textarea{
+    width: 100%;
+    height: 110px;
+    border: 1px solid #999;
+    position: relative;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 3px;
+}
+.textarea textarea{
+    width: 100%;
+    height: 100%;
+    resize: none;
+    border: 1px solid transparent;
+    background-color: transparent;
+    outline: 0;
+    padding-top: 12px;
+    padding-left: 10px;
+}
+.textarea label{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    transition: all .2s ease-in;
+}
+.textarea textarea:focus+label{
+    top: -10px;
+    background-color: #fff;
+    font-size: 14px;
+
+}
+.send_btn{
+    width: 100%;
+    height: 49px;
+    background-color: #686868;
+    border: 1px solid transparent;
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 3px;
+}
+.send_btn_enable{
+    background-color: #242424;
+}
+.static_label{
+    top: -10px !important;
+    background-color: #fff;
+    font-size: 14px;
+}
+.popup{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #2626262d;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.popup-main{
+    width: 350px;
+    height: 180px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    animation: scaleup .3s 1;
+}
+
+@keyframes scaleup{
+    0%{
+        transform: scale(.1);
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+
 
 #vision{
     display: flex;
     flex-direction: column;
     align-items: flex-end;
+    
 }
 
 .gallery__wrapper{
@@ -354,6 +494,17 @@ table th {
   }
 
 
+  .delete_btn{
+      width: 130px;
+      height: 38px;
+      border: 1px solid transparent;
+      background-color: #ff3116;
+      color: #fff;
+      cursor: pointer;
+      border-radius: 3px;
+      font-weight: 600;
+  }
+
   .logout_btn{
       width: 165px;
       height: 48px;
@@ -366,6 +517,17 @@ table th {
       font-weight: 600;
       cursor: pointer;
   }
+
+
+  @media screen and (max-width:968px){
+    .field{
+        width: 65%;
+    }
+    .login_btn{
+        width: 65%;
+    }
+}
+
 @media screen and (max-width:886px){
     .header__wrapper{
         
@@ -406,9 +568,17 @@ table th {
 }
 
 
+
+
 @media screen and (max-width: 600px) {
     table {
       border: 0;
+    }
+    .field{
+        width: 100%;
+    }
+    .login_btn{
+        width: 100%;
     }
   
     table caption {
@@ -456,12 +626,17 @@ table th {
   }
 
 
-/* @media screen and (min-width:706px){
-    .header__wrapper{
+  @media screen and (max-width:550px){
+    #vision h1,#objectives h1{
         
-        
-        height: 350px;
+        font-size: 32px;
     }
-} */
+    
+   
+  }
+
+
+
+
 
 

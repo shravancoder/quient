@@ -8,7 +8,6 @@ import Navbar from '../components/Navbar'
 function Feeback() {
 
   const [responses,setResponses] = React.useState(null);
-  const [filter,setFilter] = React.useState('fname');
   const [key,setKey] = React.useState('');
   const [filtered,setFiltered] = React.useState(null);
   const isLogin = Cookies.get('AUTH_TOKEN');
@@ -25,25 +24,16 @@ function Feeback() {
     })
   },[])
 
-  console.log('Current filter',filter);
+  
 
   const handleFilter = (e)=>{
+   
     console.log(e.target.value);
-    setFilter(e.target.value);
-    responses.sort(function(a, b){
-      let filterA = a[filter].toLowerCase();
-      let filterB = b[filter].toLowerCase();
-      if (filterA > filterB) 
-      {
-        return -1;
-      }    
-      else if (filterA < filterB)
-      {
-        return 1;
-      }   
-      return 0;
-    });
-    console.log(responses);
+    axios.get(`http://localhost:5000/contact/${e.target.value}`).then((response)=>{
+      const {data} = response;
+      console.log(data);
+      filtered?setFiltered(data):response && setResponses(data);
+    })
   }
 
 
@@ -66,6 +56,16 @@ function Feeback() {
   const handleLogout = ()=>{
     Cookies.remove('AUTH_TOKEN');
     history.push('/');
+  }
+
+
+  const handleDelete = (id)=>{
+    const element = document.getElementById(id);
+    axios.delete(`http://localhost:5000/contact/${id}`).then((response)=>{
+      element.remove();
+    }).catch((e)=>{
+      console.log(e);
+    })
   }
     return (
         <div>
@@ -114,8 +114,8 @@ function Feeback() {
                         <input type="text" placeholder="Search" value={key} onChange={handleSearch}/>
                     </div>
                     <select name="filter" id="filter" onChange={handleFilter} className="filter">
-                        <option value="first_name">by first_name</option>
-                        <option value="last_name">by last_name</option>
+                        <option value="fname">by first_name</option>
+                        <option value="lname">by last_name</option>
                         <option value="message">by message</option>
                         <option value="email">by email</option>
                     </select>
@@ -128,6 +128,7 @@ function Feeback() {
       <th scope="col">Last Name</th>
       <th scope="col">Email</th>
       <th scope="col">Message</th>
+      <th scope="col">Action</th>
     </tr>
   </thead>
   <tbody>
@@ -136,23 +137,28 @@ function Feeback() {
     {
       filtered ?filtered.map((filteredResult)=>{
         return (
-          <tr>
+          <tr id={filteredResult._id}>
               <td data-label="First Name">{filteredResult.first_name}</td>
               <td data-label="Last Name">{filteredResult.last_name}</td>
               <td data-label="Email">{filteredResult.email}</td>
               <td data-label="Message">{filteredResult.message}</td>
+              <td data-label="Action">
+                <button className="delete_btn" onClick={()=>handleDelete(filteredResult._id)}>Delete</button>
+              </td>
               
             </tr>
         )
       }):
       responses && responses.map((response)=>{
 return (
-  <tr>
+  <tr id={response._id}>
       <td data-label="First Name">{response.first_name}</td>
       <td data-label="Last Name">{response.last_name}</td>
       <td data-label="Email">{response.email}</td>
       <td data-label="Message">{response.message}</td>
-     
+      <td data-label="Action">
+                <button className="delete_btn" onClick={()=>handleDelete(response._id)}>Delete</button>
+              </td>
     </tr>
 )
       })
